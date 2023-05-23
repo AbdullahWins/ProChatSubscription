@@ -51,7 +51,7 @@ const Pricing = () => {
           <div>
             <p className="text-3xl">Choose a plan</p>
             <h2 className="text-5xl text-transparent bg-clip-text bg-gradient-to-r from-aboutGradientStart to-aboutGradientEnd font-bold pb-10">
-              That Fits For You
+              Currently on FREE tier
             </h2>
           </div>
         )}
@@ -60,16 +60,16 @@ const Pricing = () => {
         {/* card 1 */}
         <div className="w-[300px] h-[500px] bg-whiteHigh border border-whiteMid shadow-sm shadow-whiteLow  rounded-3xl relative">
           <section className="text-center">
-            <p className="text-3xl font-bold py-6">Silver</p>
+            <p className="text-3xl font-bold py-6">Free</p>
             <p className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-cardGradientStart to-cardGradientEnd">
-              $100
+              ${process.env.REACT_APP_stripePriceFree}
             </p>
             <p className="text-base text-brownFadeColor">Monthly</p>
           </section>
           <section className="p-6">
             <div className="flex items-center justify-start gap-3 py-1 text-brownTextColor">
               <img className="h-5 w-5" src={verifiedIcon} alt="" />
-              <span>One month unlimited use</span>
+              <span>Will have Ads</span>
             </div>
             <div className="flex items-center justify-start gap-3 py-1 text-brownTextColor">
               <img className="h-5 w-5" src={verifiedIcon} alt="" />
@@ -98,7 +98,8 @@ const Pricing = () => {
           </section>
           <div className="flex items-center justify-center">
             <button
-              disabled={subscriptionStatus || loading}
+              disabled
+              // disabled={subscriptionStatus || loading}
               onClick={() => {
                 handleCheckout(process.env.REACT_APP_stripeProductMonthly);
               }}
@@ -116,18 +117,18 @@ const Pricing = () => {
             </span>
             <p className="text-3xl font-bold py-6">Gold</p>
             <p className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-cardGradientStart to-cardGradientEnd">
-              $500
+              ${process.env.REACT_APP_stripePriceMonthly}
             </p>
-            <p className="text-base text-brownFadeColor">Half Yearly</p>
+            <p className="text-base text-brownFadeColor">Monthly</p>
           </section>
           <section className="p-6">
             <div className="flex items-center justify-start gap-3 py-1 text-brownTextColor">
               <img className="h-5 w-5" src={verifiedIcon} alt="" />
-              <span>Six months unlimited use</span>
+              <span>No Ads</span>
             </div>
             <div className="flex items-center justify-start gap-3 py-1 text-brownTextColor">
               <img className="h-5 w-5" src={verifiedIcon} alt="" />
-              <span>10% Discount</span>
+              <span>One month unlimited use</span>
             </div>
             <div className="flex items-center justify-start gap-3 py-1 text-brownTextColor">
               <img className="h-5 w-5" src={verifiedIcon} alt="" />
@@ -143,7 +144,7 @@ const Pricing = () => {
             </div>
             <div className="flex items-center justify-start gap-3 py-1 text-brownTextColor">
               <img className="h-5 w-5" src={verifiedIcon} alt="" />
-              <span>Half yearly subscription</span>
+              <span>Faster response than Free tier</span>
             </div>
             <div className="flex items-center justify-start gap-3 py-1 text-brownTextColor">
               <img className="h-5 w-5" src={verifiedIcon} alt="" />
@@ -158,7 +159,7 @@ const Pricing = () => {
             <button
               disabled={subscriptionStatus || loading}
               onClick={() => {
-                handleCheckout(process.env.REACT_APP_stripeProductHalfYearly);
+                handleCheckout(process.env.REACT_APP_stripeProductMonthly);
               }}
               className="btn rounded-full my-4 absolute bottom-0 bg-btnColor border-none normal-case"
             >
@@ -171,18 +172,18 @@ const Pricing = () => {
           <section className="text-center">
             <p className="text-3xl font-bold py-6">Platinum</p>
             <p className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-cardGradientStart to-cardGradientEnd">
-              $1000
+              ${process.env.REACT_APP_stripePriceYearly}
             </p>
             <p className="text-base text-brownFadeColor">Yearly</p>
           </section>
           <section className="p-6">
             <div className="flex items-center justify-start gap-3 py-1 text-brownTextColor">
               <img className="h-5 w-5" src={verifiedIcon} alt="" />
-              <span>One year unlimited use</span>
+              <span>Ad free experience</span>
             </div>
             <div className="flex items-center justify-start gap-3 py-1 text-brownTextColor">
               <img className="h-5 w-5" src={verifiedIcon} alt="" />
-              <span>20% Discount</span>
+              <span>One year unlimited use</span>
             </div>
             <div className="flex items-center justify-start gap-3 py-1 text-brownTextColor">
               <img className="h-5 w-5" src={verifiedIcon} alt="" />

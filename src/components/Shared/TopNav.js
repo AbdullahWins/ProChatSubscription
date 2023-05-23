@@ -74,7 +74,7 @@ const TopNav = () => {
           <Link
             target="_blank"
             rel="noopener noreferrer"
-            to="https://netrocreative.com/"
+            to={process.env.REACT_APP_CompanyUrl}
           >
             <button
               onClick={() => {

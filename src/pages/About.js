@@ -20,11 +20,12 @@ const About = () => {
               I'M
             </p>
             <p className="text-base text-aboutDetailsColor pt-12">
-              ProChat, a Chat GPT API-powered AI chat app developed by Netro
-              Creative, provides natural language conversations with a virtual
-              assistant for task assistance and helpful information. Its
-              advanced language processing capabilities make it convenient for
-              both personal and business use.
+              {process.env.REACT_APP_ApplicationName}, a Chat GPT API-powered AI
+              chat app developed by {process.env.REACT_APP_CompanyName},
+              provides natural language conversations with a virtual assistant
+              for task assistance and helpful information. Its advanced language
+              processing capabilities make it convenient for both personal and
+              business use.
             </p>
           </div>
           <div className="bg-whiteHigh rounded-2xl p-6 min-h-80">
@@ -33,11 +34,12 @@ const About = () => {
               I Do
             </p>
             <p className="text-base text-aboutDetailsColor pt-12">
-              Netro Creative's ProChat is an AI chat app that uses Chat GPT API,
-              helping users to accomplish their tasks and obtain helpful
-              information via natural language conversations, thanks to its
-              advanced language processing features. You're responsible for its
-              development, deployment, and maintenance.
+              {process.env.REACT_APP_CompanyName}'s{" "}
+              {process.env.REACT_APP_ApplicationName} is an AI chat app that
+              uses Chat GPT API, helping users to accomplish their tasks and
+              obtain helpful information via natural language conversations,
+              thanks to its advanced language processing features. You're
+              responsible for its development, deployment, and maintenance.
             </p>
           </div>
         </div>

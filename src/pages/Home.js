@@ -3,6 +3,7 @@ import { AiContext } from "../contexts/AiContext";
 import moduleList from "../assets/json/moduleList.json";
 import Card from "../components/Shared/Card";
 import AdBanner from "../components/Ads/AdBanner";
+import Download from "../components/Download/Download";
 
 const Home = () => {
   // changing the webpage title dynamically
@@ -28,6 +29,7 @@ const Home = () => {
             );
           })}
         </div>
+        <Download></Download>
         <AdBanner></AdBanner>
       </section>
     </div>
